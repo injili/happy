@@ -1,0 +1,163 @@
+/* ============================================== POSITION */
+.cake {
+  position: absolute;
+  display: none;
+  left: 50%;
+  margin-left: -150px; /* Adjusted for centering */
+  width: 300px;
+  height: 300px;
+}
+
+/* ============================================== BASE */
+.cake:after {
+  background: #ffffff;
+  border-radius: 50%; /* Changed to a percentage for circular shape */
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Adjusted to fit parent */
+  height: 6px; /* Adjusted to a fixed height */
+}
+
+/* ============================================== Candle */
+.velas {
+  background: #ffffff;
+  border-radius: 50%; /* Adjusted for circular shape */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px; /* Adjusted for positioning */
+  width: 15px; /* Adjusted to a fixed width */
+  height: 50px; /* Adjusted to a fixed height */
+}
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px; /* Adjusted to a fixed height */
+}
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+/* ============================================== Fire */
+.fuego {
+  display: none; /* Changed to ensure visibility */
+  border-radius: 100%; /* Changed to a percentage for circular shape */
+  box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+  position: absolute;
+  top: -30px;
+  width: 15px; /* Adjusted to a fixed width */
+  height: 40px; /* Adjusted to a fixed height */
+}
+.fuego:nth-child(1) {
+  animation: fuego 2s infinite;
+}
+.fuego:nth-child(2) {
+  animation: fuego 1.5s infinite;
+}
+.fuego:nth-child(3) {
+  animation: fuego 1s infinite;
+}
+.fuego:nth-child(4) {
+  animation: fuego 0.5s infinite;
+}
+.fuego:nth-child(5) {
+  animation: fuego 0.2s infinite;
+}
+
+/* ============================================== Animation Fire */
+@keyframes fuego {
+  0% {
+    background: rgba(254, 248, 97, 0.5);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    transform: translateY(-60px) scale(0);
+  }
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================================== Frosting */
+.cobertura {
+  background: #ece7e3;
+  border-radius: 150px; /* Adjusted to a fixed radius */
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-left: -83px; /* Adjusted for positioning */
+  margin-top: -15px; /* Adjusted for positioning */
+  width: 167px; /* Adjusted to a fixed width */
+  height: 38px; /* Adjusted to a fixed height */
+  z-index: 10;
+}
+.cobertura:after,
+.cobertura:before {
+  background: #ece7e3;
+  border-radius: 300px; /* Adjusted for circular shape */
+  content: "";
+  position: absolute;
+  width: 15px; /* Adjusted to a fixed width */
+  height: 30px; /* Adjusted to a fixed height */
+}
+.cobertura:after {
+  top: 20px;
+  right: 43px;
+}
+.cobertura:before {
+  top: 30px;
+  right: 27px;
+}
+
+/* ============================================== BIZCOCHO */
+.bizcocho {
+  background: #6d3826;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -75px; /* Adjusted for centering */
+  width: 150px; /* Adjusted to a fixed width */
+  height: 100px; /* Adjusted to a fixed height */
+}
+.bizcocho:after,
+.bizcocho:before {
+  background: rgba(236, 231, 227, 0.6);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px; /* Adjusted to a fixed height */
+}
+.bizcocho:after {
+  top: 30%;
+  left: 0;
+}
+.bizcocho:before {
+  top: 60%;
+  left: 0;
+}
+
+/* ============================================== TEXT */
+h1,
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
